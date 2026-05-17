@@ -3,11 +3,11 @@ import "../styles/global.css";
 import { siteConfig } from "../data/siteData";
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
 }
 
-const { title, description = siteConfig.description } = Astro.props;
+const { title = siteConfig.metaTitle, description = siteConfig.description } = Astro.props;
 
 const siteUrl = siteConfig.siteUrl;
 ---

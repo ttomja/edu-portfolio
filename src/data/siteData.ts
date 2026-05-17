@@ -27,7 +27,9 @@ export interface EducationTopic {
 }
 
 export const siteConfig = {
-  name: "Tom Tumanan | PORTFOLIO",
+  metaTitle: "Tom Tumanan | Portfolio",
+  name: "Tom Tumanan",
+  brandLabel: "Portfolio",
   title: "Freelance & IT Support",
   description:
     "Portfolio of a web developer and IT support freelancer focused on responsive websites, workflow automation, troubleshooting, and practical technical operations.",

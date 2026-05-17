@@ -1,4 +1,4 @@
-# Tom Joshua Portfolio
+# Tom Tumanan Portfolio
 
 Professional portfolio for a Web Developer and IT Support Freelancer. The site is built with Astro and Tailwind CSS and highlights project proof, technical skills, credentials, experience, and contact paths.
 
