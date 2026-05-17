@@ -10,7 +10,6 @@ import {
   techStack,
   sectionContent,
   stats,
-  freelancePlatforms,
 } from "../data/siteData";
 
 // Icon SVGs for each category
@@ -163,26 +162,6 @@ const categories = [
           );
         })
       }
-    </div>
-
-    <div class="mt-16 text-center">
-      <p class="text-sm text-neutral-500 mb-6">
-        Freelance profiles being prepared
-      </p>
-      <div
-        class="flex flex-wrap justify-center items-center gap-3"
-      >
-        {
-          freelancePlatforms.map((platform) => (
-            <span
-              aria-disabled="true"
-              class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-neutral-500"
-            >
-              {platform.name}: {platform.status}
-            </span>
-          ))
-        }
-      </div>
     </div>
   </div>
 </section>
