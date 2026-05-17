@@ -140,41 +140,68 @@ export const resumeProfile = {
   fullName: "Tom Joshua Tumanan",
   role: "Web Developer & IT Support Freelancer",
   emails: ["tomjatn@gmail.com", "tomjoshua.tumanan@neu.edu.ph"],
+  portrait: "/me.webp",
   summary:
-    "Technology-focused professional with a strong interest in systems, operations, web development, and data management. Reliable, organized, and committed to improving practical technical skills through real project work.",
-  webDeveloperFocus: [
-    "Build responsive web pages and portfolio/project interfaces with HTML5, CSS, JavaScript, PHP, Astro, TypeScript, and Tailwind CSS.",
-    "Work with MySQL and database-backed workflows for records, inventory, POS, and operational systems.",
-    "Use Git and GitHub to organize source code, document work, and maintain project history.",
-    "Combine web development with IT support, hardware, and networking knowledge to solve practical technical problems.",
+    "I build responsive web interfaces, database-backed workflows, and practical IT support solutions with an emphasis on working systems, clean structure, and clear documentation.",
+  proofStats: [
+    { value: "2", label: "Featured builds" },
+    { value: "React", label: "Capstone frontend" },
+    { value: "Supabase", label: "Backend practice" },
+    { value: "2", label: "Verified credentials" },
+  ],
+  proofCards: [
+    {
+      title: "Full-stack capstone system",
+      eyebrow: "React + Supabase + PostgreSQL",
+      text: "Built a deployed POS and inventory monitoring system with role-aware access, FEFO stock logic, dashboard reports, and database-backed operations.",
+    },
+    {
+      title: "Structured portfolio system",
+      eyebrow: "Astro + TypeScript + Tailwind CSS",
+      text: "Designed and maintained this portfolio as a real proof surface for projects, credentials, education topics, contact links, and resume material.",
+    },
+    {
+      title: "IT support foundation",
+      eyebrow: "Hardware + networking + admin tools",
+      text: "Backed by hardware, troubleshooting, LAN/WAN, TCP/IP, DNS, DHCP, and system maintenance knowledge from coursework and credentials.",
+    },
   ],
   skillGroups: [
     {
-      title: "Programming Languages",
-      items: ["Java", "Python", "Kotlin", "JavaScript", "MySQL"],
+      title: "Frontend Build",
+      level: "Strong focus",
+      items: ["HTML5", "CSS", "JavaScript", "Astro", "TypeScript", "Tailwind CSS", "Responsive UI"],
     },
     {
-      title: "Web Development",
-      items: ["HTML5", "CSS", "PHP", "JavaScript", "Responsive Design"],
+      title: "Backend & Data",
+      level: "Project practice",
+      items: ["PHP", "MySQL", "Supabase", "PostgreSQL", "Auth", "RLS", "Database workflows"],
     },
     {
-      title: "Software Tools",
-      items: ["Visual Studio", "Android Studio", "Git", "GitHub", "Antigravity"],
+      title: "Programming",
+      level: "Academic foundation",
+      items: ["Java", "Python", "Kotlin", "JavaScript", "SQL"],
     },
     {
-      title: "Computer Hardware",
+      title: "Tools & Workflow",
+      level: "Daily toolkit",
+      items: ["Visual Studio", "Android Studio", "Git", "GitHub", "Vercel", "Antigravity"],
+    },
+    {
+      title: "Computer Systems",
+      level: "Support foundation",
       items: [
-        "Desktop and laptop installation",
-        "System configuration",
+        "Installation",
+        "Configuration",
         "Hardware troubleshooting",
-        "CPU, RAM, storage, and GPU replacement",
+        "CPU/RAM/storage replacement",
         "BIOS/UEFI configuration",
-        "Peripheral setup",
         "Preventive maintenance",
       ],
     },
     {
       title: "Network Administration",
+      level: "Support foundation",
       items: [
         "LAN/WAN setup",
         "TCP/IP",
@@ -185,6 +212,12 @@ export const resumeProfile = {
         "Connectivity troubleshooting",
       ],
     },
+  ],
+  featuredFocus: [
+    "POS dashboard and inventory screens",
+    "FEFO stock deduction and expiry monitoring",
+    "Role-aware access and protected workflows",
+    "Clean portfolio pages with reusable data structure",
   ],
   experience: [
     {
