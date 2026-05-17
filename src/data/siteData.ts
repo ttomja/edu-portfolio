@@ -111,7 +111,7 @@ export const sectionContent = {
   resume: {
     title: "Resume",
     description:
-      "A focused overview of my web development, programming, IT support, and operations background.",
+      "A downloadable resume will be added here. For now, this page shows a coming soon state without linking to a missing file.",
     readyLabel: "Download Resume",
     pendingLabel: "Resume Coming Soon",
   },
@@ -135,119 +135,6 @@ export const stats = [
   { value: "2", label: "Verified credentials", highlight: false },
   { value: "Open", label: "Freelance and junior roles", highlight: true },
 ];
-
-export const resumeProfile = {
-  fullName: "Tom Joshua Tumanan",
-  role: "Web Developer & IT Support Freelancer",
-  emails: ["tomjatn@gmail.com", "tomjoshua.tumanan@neu.edu.ph"],
-  portrait: "/me.webp",
-  summary:
-    "I build responsive web interfaces, database-backed workflows, and practical IT support solutions with an emphasis on working systems, clean structure, and clear documentation.",
-  proofStats: [
-    { value: "2", label: "Featured builds" },
-    { value: "React", label: "Capstone frontend" },
-    { value: "Supabase", label: "Backend practice" },
-    { value: "2", label: "Verified credentials" },
-  ],
-  proofCards: [
-    {
-      title: "Full-stack capstone system",
-      eyebrow: "React + Supabase + PostgreSQL",
-      text: "Built a deployed POS and inventory monitoring system with role-aware access, FEFO stock logic, dashboard reports, and database-backed operations.",
-    },
-    {
-      title: "Structured portfolio system",
-      eyebrow: "Astro + TypeScript + Tailwind CSS",
-      text: "Designed and maintained this portfolio as a real proof surface for projects, credentials, education topics, contact links, and resume material.",
-    },
-    {
-      title: "IT support foundation",
-      eyebrow: "Hardware + networking + admin tools",
-      text: "Backed by hardware, troubleshooting, LAN/WAN, TCP/IP, DNS, DHCP, and system maintenance knowledge from coursework and credentials.",
-    },
-  ],
-  skillGroups: [
-    {
-      title: "Frontend Build",
-      level: "Strong focus",
-      items: ["HTML5", "CSS", "JavaScript", "Astro", "TypeScript", "Tailwind CSS", "Responsive UI"],
-    },
-    {
-      title: "Backend & Data",
-      level: "Project practice",
-      items: ["PHP", "MySQL", "Supabase", "PostgreSQL", "Auth", "RLS", "Database workflows"],
-    },
-    {
-      title: "Programming",
-      level: "Academic foundation",
-      items: ["Java", "Python", "Kotlin", "JavaScript", "SQL"],
-    },
-    {
-      title: "Tools & Workflow",
-      level: "Daily toolkit",
-      items: ["Visual Studio", "Android Studio", "Git", "GitHub", "Vercel", "Antigravity"],
-    },
-    {
-      title: "Computer Systems",
-      level: "Support foundation",
-      items: [
-        "Installation",
-        "Configuration",
-        "Hardware troubleshooting",
-        "CPU/RAM/storage replacement",
-        "BIOS/UEFI configuration",
-        "Preventive maintenance",
-      ],
-    },
-    {
-      title: "Network Administration",
-      level: "Support foundation",
-      items: [
-        "LAN/WAN setup",
-        "TCP/IP",
-        "DNS",
-        "DHCP",
-        "Router and switch configuration",
-        "Basic firewall and access control",
-        "Connectivity troubleshooting",
-      ],
-    },
-  ],
-  featuredFocus: [
-    "POS dashboard and inventory screens",
-    "FEFO stock deduction and expiry monitoring",
-    "Role-aware access and protected workflows",
-    "Clean portfolio pages with reusable data structure",
-  ],
-  experience: [
-    {
-      role: "Inventory Associate",
-      company: "Vizayan Merchandise / Puregold",
-      type: "Part-Time",
-      period: "March 2018 - May 2018",
-      bullets: [
-        "Managed daily stock replenishment so products stayed organized and accessible.",
-        "Assisted customers with product location and inquiries while maintaining a helpful service standard.",
-        "Conducted regular inventory checks to reduce discrepancies and prevent stock shortages.",
-        "Maintained a clean and safe work area in line with store safety protocols.",
-      ],
-    },
-  ],
-  education: [
-    {
-      school: "New Era University",
-      level: "College",
-      program: "Bachelor of Science in Information Technology",
-      period: "Aug 2021 - Present",
-    },
-    {
-      school: "Samuel Christian College",
-      level: "Senior High School",
-      program: "Science, Technology, Engineering, and Mathematics",
-      period: "Aug 2019 - Mar 2021",
-    },
-  ],
-};
 
 export const techStack = {
   automation: {
