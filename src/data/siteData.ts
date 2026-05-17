@@ -37,7 +37,7 @@ export const siteConfig = {
   resumeUrl: "",
   siteUrl: "https://tomjoshuas-projects.vercel.app/",
   social: {
-    github: "https://github.com/ttomja/edu-portfolio.git",
+    github: "https://github.com/ttomja",
     linkedin: "https://www.linkedin.com/in/tom-joshua-tumanan-221364315/",
   },
 };
