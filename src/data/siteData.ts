@@ -45,7 +45,7 @@ export const navLinks = [
   { name: "Projects", href: "/projects" },
   { name: "Resume", href: "/resume" },
   { name: "Credentials", href: "/credentials" },
-  { name: "IT Elective 6", href: "/education" },
+  { name: "IT Elective 6 - 4BSIT-4", href: "/education" },
 ];
 
 export const freelancePlatforms = [
@@ -95,8 +95,8 @@ export const sectionContent = {
       "Verified credentials that support my IT troubleshooting and systems foundation.",
   },
   educationPage: {
-    kicker: "IT Elective 6",
-    title: "IT Elective 6 - Course Topics",
+    kicker: "IT Elective 6 - 4BSIT-4",
+    title: "IT Elective 6 - 4BSIT-4 Course Topics",
     description:
       "Security models, adversarial thinking, and MITRE ATT&CK tactics from threat frameworks through initial access, execution, persistence, and discovery.",
   },
