@@ -48,10 +48,21 @@ import {
 
   <TechStack />
 
-  <section id="services" class="py-24 relative bg-neutral-900/30 border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <section id="services" class="py-24 relative overflow-hidden border-y border-white/5 bg-[#050706]">
+    <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(16,185,129,0.08),transparent_34%),linear-gradient(300deg,rgba(59,130,246,0.08),transparent_42%)]"></div>
+    <div
+      class="pointer-events-none absolute inset-0 opacity-[0.18]"
+      style="background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 28px);"
+    >
+    </div>
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-400/35 to-transparent"></div>
+    <div class="pointer-events-none absolute left-6 top-16 bottom-16 hidden w-px bg-gradient-to-b from-transparent via-emerald-400/25 to-transparent lg:block"></div>
+    <div class="pointer-events-none absolute right-6 top-16 bottom-16 hidden w-px bg-gradient-to-b from-transparent via-blue-400/25 to-transparent lg:block"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
       <div class="scroll-fade text-center max-w-3xl mx-auto mb-12">
-        <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-4">
+        <p class="text-sm font-bold text-emerald-300/80 uppercase tracking-widest mb-4">
           {sectionContent.services.title}
         </p>
         <p class="text-neutral-400 text-lg leading-relaxed">
@@ -73,9 +84,17 @@ import {
     </div>
   </section>
 
-  <section id="experience" class="py-28 relative">
-    <div class="absolute inset-0 bg-white/[0.02] -z-10"></div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <section id="experience" class="py-28 relative overflow-hidden border-b border-white/5 bg-[#050507]">
+    <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(99,102,241,0.08)_48%,rgba(16,185,129,0.06)_50%,transparent_60%)]"></div>
+    <div
+      class="pointer-events-none absolute inset-0 opacity-[0.16]"
+      style="background-image: repeating-linear-gradient(90deg, transparent 0 110px, rgba(255,255,255,0.08) 110px 111px), repeating-linear-gradient(0deg, transparent 0 42px, rgba(255,255,255,0.06) 42px 43px);"
+    >
+    </div>
+    <div class="pointer-events-none absolute left-1/2 top-0 hidden h-full w-48 -translate-x-1/2 bg-gradient-to-r from-transparent via-indigo-500/10 to-transparent md:block"></div>
+    <div class="pointer-events-none absolute left-0 right-0 top-24 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:block"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
       <div class="scroll-fade mb-16 text-center">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           {sectionContent.experience.title}
@@ -86,7 +105,7 @@ import {
       </div>
 
       <div class="relative">
-        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/5 to-transparent -translate-x-1/2"></div>
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-indigo-400/35 to-emerald-400/20 -translate-x-1/2"></div>
 
         <div class="space-y-0">
           {
