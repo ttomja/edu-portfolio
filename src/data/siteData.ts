@@ -57,8 +57,8 @@ export const freelancePlatforms = [
 export const sectionContent = {
   hero: {
     badge: "Available for web, IT support, and automation work",
-    titleLine1: "Web Developer",
-    titleLine2: "& IT Support Freelancer",
+    titleLine1: "Freelance",
+    titleLine2: "& IT Support",
     description:
       "I build responsive websites, organize technical workflows, and troubleshoot systems for teams that need practical, reliable support.",
     primaryCta: "View Projects",
