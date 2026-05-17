@@ -111,7 +111,7 @@ export const sectionContent = {
   resume: {
     title: "Resume",
     description:
-      "A downloadable resume will be added here. For now, this page shows a coming soon state without linking to a missing file.",
+      "A focused overview of my web development, programming, IT support, and operations background.",
     readyLabel: "Download Resume",
     pendingLabel: "Resume Coming Soon",
   },
@@ -135,6 +135,86 @@ export const stats = [
   { value: "2", label: "Verified credentials", highlight: false },
   { value: "Open", label: "Freelance and junior roles", highlight: true },
 ];
+
+export const resumeProfile = {
+  fullName: "Tom Joshua Tumanan",
+  role: "Web Developer & IT Support Freelancer",
+  emails: ["tomjatn@gmail.com", "tomjoshua.tumanan@neu.edu.ph"],
+  summary:
+    "Technology-focused professional with a strong interest in systems, operations, web development, and data management. Reliable, organized, and committed to improving practical technical skills through real project work.",
+  webDeveloperFocus: [
+    "Build responsive web pages and portfolio/project interfaces with HTML5, CSS, JavaScript, PHP, Astro, TypeScript, and Tailwind CSS.",
+    "Work with MySQL and database-backed workflows for records, inventory, POS, and operational systems.",
+    "Use Git and GitHub to organize source code, document work, and maintain project history.",
+    "Combine web development with IT support, hardware, and networking knowledge to solve practical technical problems.",
+  ],
+  skillGroups: [
+    {
+      title: "Programming Languages",
+      items: ["Java", "Python", "Kotlin", "JavaScript", "MySQL"],
+    },
+    {
+      title: "Web Development",
+      items: ["HTML5", "CSS", "PHP", "JavaScript", "Responsive Design"],
+    },
+    {
+      title: "Software Tools",
+      items: ["Visual Studio", "Android Studio", "Git", "GitHub", "Antigravity"],
+    },
+    {
+      title: "Computer Hardware",
+      items: [
+        "Desktop and laptop installation",
+        "System configuration",
+        "Hardware troubleshooting",
+        "CPU, RAM, storage, and GPU replacement",
+        "BIOS/UEFI configuration",
+        "Peripheral setup",
+        "Preventive maintenance",
+      ],
+    },
+    {
+      title: "Network Administration",
+      items: [
+        "LAN/WAN setup",
+        "TCP/IP",
+        "DNS",
+        "DHCP",
+        "Router and switch configuration",
+        "Basic firewall and access control",
+        "Connectivity troubleshooting",
+      ],
+    },
+  ],
+  experience: [
+    {
+      role: "Inventory Associate",
+      company: "Vizayan Merchandise / Puregold",
+      type: "Part-Time",
+      period: "March 2018 - May 2018",
+      bullets: [
+        "Managed daily stock replenishment so products stayed organized and accessible.",
+        "Assisted customers with product location and inquiries while maintaining a helpful service standard.",
+        "Conducted regular inventory checks to reduce discrepancies and prevent stock shortages.",
+        "Maintained a clean and safe work area in line with store safety protocols.",
+      ],
+    },
+  ],
+  education: [
+    {
+      school: "New Era University",
+      level: "College",
+      program: "Bachelor of Science in Information Technology",
+      period: "Aug 2021 - Present",
+    },
+    {
+      school: "Samuel Christian College",
+      level: "Senior High School",
+      program: "Science, Technology, Engineering, and Mathematics",
+      period: "Aug 2019 - Mar 2021",
+    },
+  ],
+};
 
 export const techStack = {
   automation: {

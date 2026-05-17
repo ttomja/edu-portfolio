@@ -2,76 +2,203 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import { sectionContent, siteConfig } from "../data/siteData";
+import { resumeProfile, sectionContent, siteConfig } from "../data/siteData";
 
 const hasResume = siteConfig.resumeUrl.length > 0;
+
+const contactLinks = [
+  {
+    label: "Email",
+    value: resumeProfile.emails[0],
+    href: `mailto:${resumeProfile.emails[0]}`,
+  },
+  {
+    label: "Student Email",
+    value: resumeProfile.emails[1],
+    href: `mailto:${resumeProfile.emails[1]}`,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/ttomja",
+    href: siteConfig.social.github,
+  },
+  {
+    label: "LinkedIn",
+    value: "LinkedIn Profile",
+    href: siteConfig.social.linkedin,
+  },
+];
 ---
 
-<Layout>
+<Layout description={sectionContent.resume.description}>
   <Navbar />
 
-  <div class="pt-28 md:pt-32 pb-10 px-4 sm:px-6">
-    <div class="scroll-fade max-w-6xl mx-auto text-center">
-      <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-4">
-        Resume File
-      </p>
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-        {sectionContent.resume.title}
-      </h1>
-    </div>
-  </div>
-
-  <section class="pb-24 md:pb-32">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <div class="scroll-fade rounded-2xl border border-white/10 bg-neutral-900/70 p-7 md:p-8 text-center">
-        <h2 class="text-2xl font-bold text-white mb-4">
-          Resume Coming Soon
-        </h2>
-        <p class="text-neutral-400 leading-relaxed mb-6">
-          The downloadable resume is not available yet. This button will be enabled once the final file is ready.
+  <section class="pt-28 md:pt-32 pb-14 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-start">
+      <div class="scroll-fade">
+        <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-4">
+          Resume Showcase
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+          {resumeProfile.fullName}
+        </h1>
+        <p class="text-xl md:text-2xl text-indigo-300 font-semibold mb-6">
+          {resumeProfile.role}
+        </p>
+        <p class="text-neutral-300 text-lg leading-relaxed max-w-3xl">
+          {resumeProfile.summary}
         </p>
 
-        {
-          hasResume ? (
-            <a
-              href={siteConfig.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center bg-white text-neutral-950 font-bold px-8 py-4 rounded-full hover:bg-neutral-200 transition-colors"
-            >
-              {sectionContent.resume.readyLabel}
-            </a>
-          ) : (
-            <span
-              aria-disabled="true"
-              class="inline-flex items-center justify-center bg-white/10 text-neutral-400 font-bold px-8 py-4 rounded-full border border-white/10 cursor-not-allowed"
-            >
-              {sectionContent.resume.pendingLabel}
-            </span>
-          )
-        }
+        <div class="mt-8 flex flex-wrap gap-3">
+          {
+            contactLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300 transition-colors hover:border-indigo-400/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/70"
+              >
+                <span class="font-semibold text-white">{link.label}:</span>{" "}
+                {link.value}
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          {
+            hasResume ? (
+              <a
+                href={siteConfig.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-neutral-950 transition-colors hover:bg-neutral-200"
+              >
+                {sectionContent.resume.readyLabel}
+              </a>
+            ) : (
+              <span
+                aria-disabled="true"
+                class="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-bold text-neutral-400"
+              >
+                {sectionContent.resume.pendingLabel}
+              </span>
+            )
+          }
+          <a
+            href="/projects"
+            class="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-indigo-400/50 hover:bg-white/[0.04]"
+          >
+            View Project Proof
+          </a>
+        </div>
       </div>
+
+      <aside class="scroll-fade rounded-lg border border-white/10 bg-neutral-900/70 p-6">
+        <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-4">
+          Web Developer Focus
+        </p>
+        <div class="space-y-4">
+          {
+            resumeProfile.webDeveloperFocus.map((item) => (
+              <div class="border-l border-indigo-400/50 pl-4">
+                <p class="text-neutral-300 leading-relaxed">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </aside>
     </div>
   </section>
 
-  <a
-    href="/"
-    class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center gap-2 px-4 py-2.5 md:px-5 md:py-3 bg-neutral-900/80 backdrop-blur-md border border-white/10 rounded-full text-white shadow-2xl hover:bg-neutral-800 hover:scale-105 transition-all duration-300 group"
-  >
-    <svg
-      class="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors group-hover:-translate-x-1 duration-300"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-    </svg>
-    <span class="font-medium">Home</span>
-  </a>
+  <section class="pb-24 md:pb-32 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <div class="scroll-fade">
+        <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-4">
+          Relevant Skills
+        </p>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {
+            resumeProfile.skillGroups.map((group) => (
+              <article class="rounded-lg border border-white/10 bg-neutral-900/60 p-5">
+                <h2 class="text-lg font-bold text-white mb-4">{group.title}</h2>
+                <div class="flex flex-wrap gap-2">
+                  {
+                    group.items.map((item) => (
+                      <span class="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-neutral-300">
+                        {item}
+                      </span>
+                    ))
+                  }
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <section class="scroll-fade rounded-lg border border-white/10 bg-neutral-900/60 p-6">
+          <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-5">
+            Work Experience
+          </p>
+          {
+            resumeProfile.experience.map((job) => (
+              <article>
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h2 class="text-2xl font-bold text-white">{job.role}</h2>
+                    <p class="text-indigo-300 font-semibold">
+                      {job.company} - {job.type}
+                    </p>
+                  </div>
+                  <span class="w-fit rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-bold text-neutral-300">
+                    {job.period}
+                  </span>
+                </div>
+                <ul class="mt-5 space-y-3 text-neutral-300">
+                  {
+                    job.bullets.map((bullet) => (
+                      <li class="flex gap-3 leading-relaxed">
+                        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400"></span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </article>
+            ))
+          }
+        </section>
+
+        <section class="scroll-fade rounded-lg border border-white/10 bg-neutral-900/60 p-6">
+          <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-5">
+            Education
+          </p>
+          <div class="space-y-6">
+            {
+              resumeProfile.education.map((item) => (
+                <article class="border-l border-white/10 pl-4">
+                  <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h2 class="text-xl font-bold text-white">{item.school}</h2>
+                      <p class="text-sm font-semibold text-indigo-300">
+                        {item.level}
+                      </p>
+                    </div>
+                    <span class="w-fit rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-bold text-neutral-300">
+                      {item.period}
+                    </span>
+                  </div>
+                  <p class="mt-3 text-neutral-300 leading-relaxed">{item.program}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
 
   <Footer />
 </Layout>
