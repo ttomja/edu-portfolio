@@ -96,7 +96,7 @@ export const sectionContent = {
   },
   educationPage: {
     kicker: "IT Elective 6 - 4BSIT-4",
-    title: "IT Elective 6 - 4BSIT-4 Course Topics",
+    title: "Course Topics",
     description:
       "Security models, adversarial thinking, and MITRE ATT&CK tactics from threat frameworks through initial access, execution, persistence, and discovery.",
   },
