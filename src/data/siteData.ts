@@ -45,7 +45,7 @@ export const navLinks = [
   { name: "Projects", href: "/projects" },
   { name: "Resume", href: "/resume" },
   { name: "Credentials", href: "/credentials" },
-  { name: "IT Elective 6 - 4BSIT-4", href: "/education" },
+  { name: "IT Elective 6", href: "/education" },
 ];
 
 export const freelancePlatforms = [
